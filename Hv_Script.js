@@ -4,13 +4,19 @@
     /**
      * Header toggle
      */
+    const header = document.querySelector('#header');
     const headerToggleBtn = document.querySelector('.header-toggle');
-  
+
     function headerToggle() {
-      document.querySelector('#header').classList.toggle('header-show');
-      headerToggleBtn.classList.toggle('bi-list');
-      headerToggleBtn.classList.toggle('bi-x');
+    if (window.innerWidth >= 1200) {
+        header.classList.toggle('hide-desktop'); 
+    } else {
+        header.classList.toggle('header-show');
     }
+    headerToggleBtn.classList.toggle('bi-list');
+    headerToggleBtn.classList.toggle('bi-x');
+    }
+
     headerToggleBtn.addEventListener('click', headerToggle);
   
     /**
