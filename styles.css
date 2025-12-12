@@ -1120,6 +1120,8 @@ section,
   background-color: var(--accent-color);
 }
 
+
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1127,6 +1129,15 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
+
+  position: relative;
+  height: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.3);     /* base glass */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
 }
 
 @media (max-width: 575px) {
@@ -1172,10 +1183,36 @@ section,
 }
 
 .contact .php-email-form {
-  background-color: var(--surface-color);
+  position: relative;
   height: 100%;
   padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);     /* base glass */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
+
+   /* Fondo con logo */
+  background-image: url("Images/Logo WalasSoft.png");
+  background-size: 600px;              /* tamaño del logo */
+  background-repeat: no-repeat;
+  background-position: center px;     /* lo puedes mover */
+  background-attachment: local;
+  opacity: 1; 
+}
+
+.contact .php-email-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55); 
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.contact .php-email-form * {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 575px) {
@@ -1190,7 +1227,7 @@ section,
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 12px;
   color: var(--default-color);
   background-color: var(--surface-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
@@ -1200,6 +1237,7 @@ section,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
