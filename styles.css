@@ -817,11 +817,11 @@ section,
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 800;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color));
   margin-bottom: 10px;
 }
 
@@ -1345,4 +1345,31 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# boton whatsapp
+--------------------------------------------------------------*/
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366 !important;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s, transform .2s;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe5b !important;
+  background-color: #1ebe5b !important;
+  transform: translateY(-2px) ;
+}
+.btn-whatsapp i {
+  font-size: 20px;
 }
