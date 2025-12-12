@@ -223,5 +223,22 @@
     }
     window.addEventListener('load', navmenuScrollspy);
     document.addEventListener('scroll', navmenuScrollspy);
+
+    
   
   })();
+
+  function sendToWhatsApp() {
+    const phone = "573192106183"; 
+
+    const name = document.getElementById("name-field").value;
+    const email = document.getElementById("email-field").value;
+    const subject = document.getElementById("subject-field").value;
+    const message = document.getElementById("message-field").value;
+
+    const text = `Hola, te escribo desde tu sitio web. \nSoy: ${name} \nMi correo: ${email} \nAsunto: ${subject}\nMensaje: ${message}`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+}
